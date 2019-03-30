@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	  ng-app="calculator">
+<head>
+    <meta charset="utf-8" />
+    <title>Calculator App</title>
+	 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src='app.js'></script>
+</head>
+<body>
+	<div ng-controller = "calculatorCtrl as ctrl">
+		<h1>Calculator App</h1>
+		<input type ="text" ng-model = "ctrl.input1"/>
+		<span ng-bind = "ctrl.selectedOperation"></span>
+		<input type ="text" ng-model = "ctrl.input2"/>
+		<button ng-click = "ctrl.getResult()">=</button>
+		<span ng-bind = "ctrl.result"></span>
+
+		<h3>Choose options:</h3>
+		<button ng-click = "ctrl.buttonClicked('+')">+</button>
+		<button ng-click = "ctrl.buttonClicked('-')">-</button>
+		<button ng-click = "ctrl.buttonClicked('*')">*</button>
+		<button ng-click = "ctrl.buttonClicked('/')">/</button>
+	</div>
+</body>
+</html>
